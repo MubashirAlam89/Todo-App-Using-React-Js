@@ -26,8 +26,10 @@ export const TodoList = () => {
     items.splice(toBeDeletedIndex, 1);
     setItems([...items]);
   };
-  const addTask = () => {
-    const title = prompt("Enter the task title");
+  const addTask = (title) => {
+    if (!title) {
+      return;
+    }
     const newTask = { id: items.length + 1, title };
     const newItems = [...items, newTask];
     setItems(newItems);
