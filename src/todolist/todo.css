@@ -23,7 +23,12 @@
   padding: 0 20px;
   height: 40px;
 }
-
+.icons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+}
 .todo-icon {
   width: 20px;
   height: 20px;
