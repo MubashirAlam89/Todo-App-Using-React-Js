@@ -23,3 +23,9 @@
   padding: 0 20px;
   height: 40px;
 }
+
+.todo-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
