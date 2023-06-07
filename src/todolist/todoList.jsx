@@ -21,7 +21,11 @@ export const TodoList = () => {
       title: "Learn to be Insan",
     },
   ]);
-
+  const deleteTodo = (id) => {
+    const toBeDeletedIndex = items.findIndex((item) => item.id === id);
+    items.splice(toBeDeletedIndex, 1);
+    setItems([...items]);
+  };
   const addTask = () => {
     const title = prompt("Enter the task title");
     const newTask = { id: items.length + 1, title };
@@ -36,7 +40,13 @@ export const TodoList = () => {
       </div>
       <div className="todo-list shadow-lg">
         {items.map((item) => (
-          <TodoItem key={item.id} title={item.title} />
+          <TodoItem
+            key={item.id}
+            title={item.title}
+            deleteTodo={() => {
+              deleteTodo(item.id);
+            }}
+          />
         ))}
       </div>
       <AddTodo addTodo={addTask} />
