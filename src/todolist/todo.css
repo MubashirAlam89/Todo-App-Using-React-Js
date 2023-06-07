@@ -10,3 +10,9 @@
   color: white;
   font-size: 18px;
 }
+
+.todo-list {
+  width: 400px;
+  margin-top: 20px;
+  background-color: white;
+}
