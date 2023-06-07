@@ -16,3 +16,10 @@
   margin-top: 20px;
   background-color: white;
 }
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 40px;
+}
