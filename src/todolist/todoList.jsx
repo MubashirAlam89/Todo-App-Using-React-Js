@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./todo.css";
 import { TodoItem } from "./todoitem";
+import { AddTodo } from "./addtodo";
 export const TodoList = () => {
   const [items, setItems] = useState([
     {
@@ -38,9 +39,10 @@ export const TodoList = () => {
           <TodoItem key={item.id} title={item.title} />
         ))}
       </div>
-      <button className="todo-add-btn rounded-md" onClick={addTask}>
+      <AddTodo addTodo={addTask} />
+      {/* <button className="todo-add-btn rounded-md" onClick={addTask}>
         + New Task
-      </button>
+      </button> */}
     </div>
   );
 };
