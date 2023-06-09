@@ -72,3 +72,15 @@
 .input-field:focus {
   outline: 1px solid #af7eeb;
 }
+
+@media only screen and (max-width: 600px) {
+  .bar {
+    width: 330px;
+  }
+  .todo-list {
+    width: 330px;
+  }
+  .input-field {
+    width: 330px;
+  }
+}
